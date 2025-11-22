@@ -3,40 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Paddy The Beach - Home</title>
+  <title>Paddy The Beach</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- ハンバーガーメニュー -->
   <header>
-    <div class="logo">Paddy The Beach</div>
-    <div class="hamburger" id="hamburger">
-      &#9776; <!-- 三本線 -->
-    </div>
-    <nav class="nav-menu" id="nav-menu">
+    <h1>Paddy The Beach</h1>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <nav id="nav-menu">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="shop.html">Category</a></li>
-        <li><a href="shop.html">Mix CD - Digital Download</a></li>
-        <li><a href="shop.html">Goods</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Mix CD</a></li>
+        <li><a href="#">Digital Download</a></li>
+        <li><a href="#">Goods</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">SNS</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- メインコンテンツ -->
   <main>
     <section class="hero">
-      <h1>Welcome to Paddy The Beach</h1>
-      <p>Your source for exclusive mixes and music updates.</p>
+      <h2>Welcome to Paddy The Beach</h2>
+      <p>Check out our latest mixes and goodies!</p>
     </section>
 
     <section class="products">
       <h2>Products</h2>
       <div class="product-grid">
-        <div class="product">Mix 1</div>
-        <div class="product">Mix 2</div>
-        <div class="product">Mix 3</div>
-        <div class="product">Mix 4</div>
+        <div class="product">
+          <img src="https://via.placeholder.com/150" alt="Mix 1">
+          <h3>Mix 1</h3>
+          <p>Digital Download</p>
+          <a class="buy-button" href="https://buy.stripe.com/test_1234" target="_blank">Buy Now</a>
+        </div>
+        <div class="product">
+          <img src="https://via.placeholder.com/150" alt="Mix 2">
+          <h3>Mix 2</h3>
+          <p>Digital Download</p>
+          <a class="buy-button" href="https://buy.stripe.com/test_1234" target="_blank">Buy Now</a>
+        </div>
       </div>
     </section>
   </main>

@@ -1,39 +1,114 @@
-/* 既存のstyle.cssの下に追加してOK */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #000;
+}
 
+header {
+  position: relative;
+  padding: 20px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.menu-toggle {
+  font-size: 30px;
+  cursor: pointer;
+  display: none; /* PCでは非表示 */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* PCでは横並び */
+  gap: 20px;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #000;
+  transition: 0.2s;
+}
+
+nav ul li a:hover {
+  color: #ff3366;
+}
+
+/* スマホ対応 */
 @media (max-width: 768px) {
-  nav ul {
-    position: fixed; /* スクロールしても右上に固定 */
-    top: 60px;
-    right: 20px;
-    width: 200px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    z-index: 1000;
+  .menu-toggle {
+    display: block; /* 三本線表示 */
   }
 
-  .menu-toggle {
-    display: block; /* モバイルで三本線表示 */
+  nav ul {
+    display: none; /* 最初は非表示 */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 0;
+    width: 180px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  }
+
+  nav ul.show {
+    display: flex; /* 三本線押したら表示 */
   }
 
   nav ul li a {
-    padding: 15px 20px;
+    padding: 10px 20px;
   }
 }
 
-@media (min-width: 769px) {
-  nav ul {
-    display: flex !important; /* PCでは横並びに */
-    position: static;
-    flex-direction: row;
-    border: none;
-    box-shadow: none;
-    background: none;
-  }
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+}
 
-  nav ul li a {
-    padding: 0 15px;
-  }
+.products {
+  padding: 20px;
+}
 
-  .menu-toggle {
-    display: none; /* PCでは三本線非表示 */
-  }
+.product-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  width: 150px;
+}
+
+.buy-button {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-top: 5px;
+  background: #ff3366;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: 0.2s;
+}
+
+.buy-button:hover {
+  background: #e60050;
 }

@@ -1,1 +1,6 @@
-// 今は空。後でボタンを押したときに内容切り替え可能
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('nav-menu');
+
+hamburger.addEventListener('click', () => {
+  navMenu.style.display = navMenu.style.display === 'block' ? 'none' : 'block';
+});

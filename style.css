@@ -1,54 +1,71 @@
-/* 全体の背景と文字色 */
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #0d0d0d;
-  color: #fff;
+  font-family: sans-serif;
+  background-color: #fff;
 }
 
-/* ヘッダー */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
-  background-color: #111;
-  border-bottom: 1px solid #333;
+  padding: 10px 20px;
+  position: relative;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
 }
 
-/* ロゴ */
-header h1 {
-  font-size: 1.8rem;
-  letter-spacing: 2px;
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-/* ナビボタン */
-nav ul {
+.hamburger {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: none; /* 最初は非表示 */
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.nav-menu ul {
   list-style: none;
-  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu li {
+  margin: 10px 0;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #000;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.products {
+  padding: 20px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 20px;
 }
 
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: #ff0066; /* クールなアクセント */
-}
-
-/* メインコンテンツ */
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 70vh;
+.product {
+  padding: 20px;
+  border: 1px solid #ccc;
   text-align: center;
-}
-
-.content p {
-  font-size: 1.2rem;
 }

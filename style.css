@@ -23,14 +23,14 @@ header {
 .menu-toggle {
   font-size: 30px;
   cursor: pointer;
-  display: none; /* PCでは非表示 */
+  display: none;
 }
 
 nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex; /* PCでは横並び */
+  display: flex;
   gap: 20px;
 }
 
@@ -49,11 +49,11 @@ nav ul li a:hover {
 /* スマホ対応 */
 @media (max-width: 768px) {
   .menu-toggle {
-    display: block; /* 三本線表示 */
+    display: block;
   }
 
   nav ul {
-    display: none; /* 最初は非表示 */
+    display: none;
     flex-direction: column;
     position: absolute;
     top: 60px;
@@ -67,7 +67,7 @@ nav ul li a:hover {
   }
 
   nav ul.show {
-    display: flex; /* 三本線押したら表示 */
+    display: flex;
   }
 
   nav ul li a {
@@ -95,17 +95,22 @@ nav ul li a:hover {
   border: 1px solid #ccc;
   padding: 10px;
   text-align: center;
-  width: 150px;
+  width: 200px;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
 }
 
 .buy-button {
-  display: inline-block;
-  padding: 5px 10px;
-  margin-top: 5px;
+  display: block;
+  margin: 10px auto 0 auto;
+  padding: 8px 15px;
   background: #ff3366;
   color: #fff;
   text-decoration: none;
-  border-radius: 3px;
+  border-radius: 5px;
   transition: 0.2s;
 }
 
